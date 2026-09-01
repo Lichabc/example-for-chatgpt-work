@@ -1,190 +1,301 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>職場 AI 靈魂型態測驗</title><style>*{box-sizing:border-box}body{margin:0;
-font-family:Arial,'PingFang TC','Microsoft JhengHei',sans-serif;
-color:#2C3E50}main{min-height:100dvh;
-display:grid;
-place-items:center;
-padding:24px 16px;
-background:#FFF9E6;
-background-image:radial-gradient(#ffe3a5 1.4px,transparent 1.4px);
-background-size:26px 26px;
-overflow:hidden}.stars{position:absolute;
-top:9%;
-right:8%;
-font-size:34px;
-color:#FF9F43;
-letter-spacing:12px}.card{width:min(620px,100%);
-background:#fffdf7;
-border:3px solid #FF8A75;
-border-radius:34px;
-padding:36px 42px;
-text-align:center;
-box-shadow:0 13px #ffc9be,0 27px 55px #bd755833;
-animation:pop .4s ease-out}@keyframes pop{from{opacity:.3;
-transform:scale(.94)}to{opacity:1;
-transform:none}}small{display:block;
-color:#FF8A75;
-font-size:12px;
-font-weight:900;
-letter-spacing:1.5px;
-margin-bottom:10px}.hero{font-size:70px;
-margin-bottom:12px;
-filter:drop-shadow(0 5px #ffe1a2)}h1{font-size:clamp(28px,5vw,42px);
-line-height:1.3;
-margin:0;
-font-weight:900}h1+p{font-size:17px;
-line-height:1.7;
-margin:19px 0}.tags,mark{display:inline-block;
-background:#FFF1C9;
-color:#a66032;
-padding:8px 14px;
-border-radius:50px;
-font-weight:800;
-font-size:13px;
-margin-bottom:25px}button{border:0;
-border-radius:17px;
-background:#FF9F43;
-color:white;
-padding:16px 26px;
-font-size:17px;
-font-weight:900;
-cursor:pointer;
-box-shadow:0 6px #dc7722;
-transition:.18s}button:hover{transform:translateY(-2px)}button:active{transform:translateY(4px);
-box-shadow:none}i{display:block;
-color:#80909c;
-font-size:13px;
-font-style:normal;
-margin-top:22px}.quiz{text-align:left}.quiz header{display:flex;
-justify-content:space-between;
-color:#FF8A75;
-font-size:14px;
-font-weight:900}.bar{height:12px;
-border-radius:20px;
-background:#ffe5d4;
-overflow:hidden;
-margin:10px 0 25px}.bar span{display:block;
-height:100%;
-background:linear-gradient(90deg,#FF8A75,#FF9F43);
-border-radius:inherit;
-transition:.3s}.icon{margin:auto auto 15px;
-width:72px;
-height:72px;
-border-radius:25px;
-background:#FFF1C9;
-display:grid;
-place-items:center;
-font-size:38px}.quiz small{text-align:center}.quiz h2{font-size:clamp(22px,4.5vw,29px);
-line-height:1.45;
-text-align:center;
-margin:8px 0 20px}.choices{display:grid;
-gap:11px}.choices button{background:white;
-color:#2C3E50;
-border:2px solid #ffd2c9;
-box-shadow:none;
-text-align:left;
-padding:12px 14px;
-display:flex;
-align-items:center;
-gap:12px;
-font-size:15px}.choices button:hover{background:#fff6ef;
-border-color:#FF8A75}.choices strong{width:29px;
-height:29px;
-display:grid;
-place-items:center;
-flex:none;
-background:#FFF1C9;
-color:#FF8A75;
-border-radius:10px;
-font-size:12px}.choices b{margin-left:auto;
-color:#FF8A75;
-font-size:24px}.result{text-align:left}.result>small,.result>h2{text-align:center}.result h2{font-size:clamp(25px,5vw,37px);
-line-height:1.25;
-margin:10px 0}.result mark{display:table;
-margin:0 auto 19px}.result article{border-top:2px dashed #ffd7ce;
-padding:15px 0 4px}.result h3{color:#FF8A75;
-font-size:17px;
-margin:0 0 8px}.result p{margin:0;
-line-height:1.75;
-font-size:15px}.haiku{background:#fff4cf!important;
-border:0!important;
-border-radius:18px;
-padding:15px!important;
-margin-top:13px}.haiku p{text-align:center;
-font-weight:800;
-color:#80543e}.actions{display:flex;
-gap:11px;
-margin-top:24px}.actions button{flex:1;
-font-size:15px;
-padding:14px 10px}.outline{background:#fff;
-color:#FF8A75;
-border:2px solid #FF8A75;
-box-shadow:0 5px #ffd5ce}@media(max-width:560px){main{padding:16px 12px;
-align-items:start}.card{padding:29px 21px;
-border-radius:28px;
-margin-top:12px}.start{margin-top:7vh}h1+p{font-size:15px}.stars{display:none}.choices button{font-size:14px}.actions{flex-direction:column}.result h2{font-size:26px}}</style>
-</head><body><main id="app">
-</main><script>
-const Q=[['📝','主管丟來一份「麻煩潤飾一下」的 2,000 字文案，你會？',['深呼吸，自己慢慢捏字句','先改一半，再問 AI 另一半','請 AI 出三版，我負責挑可愛的','我早有專屬提示詞魔法書']],['📊','Excel 出現 800 列資料需要整理，第一個念頭是？',['手動排序，手指會記得一切','善用篩選，至少不是全手動','請 AI 幫我寫公式，再檢查','Power Query + AI：資料自己排隊']],['🎙️','一小時會議結束，會議紀錄在對你眨眼。你？',['憑記憶寫，祈禱沒漏重點','邊回放邊快轉，努力當人形錄音筆','丟逐字稿給 AI 摘要，人工複核','會前就開好 AI 記錄員，散會即交卷']],['📧','同類型回信今天要發第 15 封，你的能量條？',['複製貼上，改名字改到眼神死','存範本，還是手動補內容','請 AI 依對象調整語氣','自動化流程已準備好，我去泡茶']],['🧠','面對陌生工作任務時，你怎麼拆解？',['先 Google 三小時，勇敢前進','問同事，然後努力筆記','請 AI 協助列步驟與檢查清單','先餵背景、目標、限制，請 AI 當副駕']],['⚙️','每週都要做同一份報表，你會？',['把它當例行修行','建立模板，至少排版不用重來','研究一下能否讓 AI 協助彙整','串好自動化，報表自己來報到']],['🔎','AI 給了一段看起來超專業的答案，你的反應？',['好像很有道理，先貼上','挑幾句查查看','核對數字、來源和任務條件','把 AI 當草稿搭檔，驗證是我的超能力']],['🎨','同事說：「可以把這份內容變得有吸引力嗎？」',['加粗、加色、加很多愛','找幾個舊簡報當參考','請 AI 提供結構與標題提案','先定受眾，再請 AI 產多種敘事版本']],['🗂️','資料夾堆成「final_final_真的最終版」，你會？',['靠直覺尋寶','今天開始命名規則（明天再說）','請 AI 協助整理命名與索引','流程、標籤、摘要都自動化，舒暢']],['✨','你理想中的 AI 同事應該是？',['偶爾幫我查資料就好','能幫我省一點打字時間','幫我先做 70% 的草稿','能被我清楚指揮的全天候小隊']]];
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>職場 AI 靈魂型態測驗</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,"PingFang TC","Microsoft JhengHei",sans-serif;color:#2c3e50}
+main{min-height:100dvh;display:grid;place-items:center;padding:24px 16px;background:#fff9e6;background-image:radial-gradient(#ffe3a5 1.4px,transparent 1.4px);background-size:26px 26px}
+.card{width:min(620px,100%);background:#fffdf7;border:3px solid #ff8a75;border-radius:34px;padding:36px 42px;text-align:center;box-shadow:0 13px #ffc9be,0 27px 55px #bd755833}
+small{display:block;color:#ff8a75;font-size:12px;font-weight:900;letter-spacing:1.5px;margin-bottom:10px}
+h1,h2{margin:0;font-weight:900}
+h1{font-size:clamp(28px,5vw,42px);line-height:1.3}
+h1+p{font-size:17px;line-height:1.7;margin:19px 0}
+.tags,mark{display:inline-block;background:#fff1c9;color:#a66032;padding:8px 14px;border-radius:50px;font-weight:800;font-size:13px;margin-bottom:25px}
+button{border:0;border-radius:17px;background:#ff9f43;color:#fff;padding:16px 26px;font-size:17px;font-weight:900;cursor:pointer;box-shadow:0 6px #dc7722}
+button:active{transform:translateY(4px);box-shadow:none}
+i{display:block;color:#80909c;font-size:13px;font-style:normal;margin-top:22px}
+.quiz{text-align:left}
+.quiz header{display:flex;justify-content:space-between;color:#ff8a75;font-size:14px;font-weight:900}
+.bar{height:12px;border-radius:20px;background:#ffe5d4;overflow:hidden;margin:10px 0 25px}
+.bar span{display:block;height:100%;background:linear-gradient(90deg,#ff8a75,#ff9f43);border-radius:inherit}
+.icon{margin:auto auto 15px;width:72px;height:72px;border-radius:25px;background:#fff1c9;display:grid;place-items:center;font-size:38px}
+.quiz small{text-align:center}
+.quiz h2{font-size:clamp(22px,4.5vw,29px);line-height:1.45;text-align:center;margin:8px 0 20px}
+.choices{display:grid;gap:11px}
+.choices button{background:#fff;color:#2c3e50;border:2px solid #ffd2c9;box-shadow:none;text-align:left;padding:12px 14px;display:flex;align-items:center;gap:12px;font-size:15px}
+.choices strong{width:29px;height:29px;display:grid;place-items:center;flex:none;background:#fff1c9;color:#ff8a75;border-radius:10px;font-size:12px}
+.choices b{margin-left:auto;color:#ff8a75;font-size:24px}
+.result{text-align:left}
+.result>small,.result>h2{text-align:center}
+.result h2{font-size:clamp(25px,5vw,37px);line-height:1.25;margin:10px 0}
+.result mark{display:table;margin:0 auto 19px}
+.portrait{display:block;width:145px;height:145px;object-fit:contain;object-position:center;margin:8px auto 12px;padding:6px;border-radius:24px;background:#fff8e8;box-shadow:0 5px 0 #ffd2c9;border:2px solid #ff8a75}
+.result article{border-top:2px dashed #ffd7ce;padding:15px 0 4px}
+.result h3{color:#ff8a75;font-size:17px;margin:0 0 8px}
+.result p{margin:0;line-height:1.75;font-size:15px}
+.haiku{background:#fff4cf!important;border:0!important;border-radius:18px;padding:15px!important;margin-top:13px}
+.haiku p{text-align:center;font-weight:800;color:#80543e}
+.actions{display:flex;gap:11px;margin-top:24px}
+.actions button{flex:1;font-size:15px;padding:14px 10px}
+.outline{background:#fff;color:#ff8a75;border:2px solid #ff8a75;box-shadow:0 5px #ffd5ce}
+@media(max-width:560px){
+main{padding:16px 12px;align-items:start}
+.card{padding:29px 21px;border-radius:28px;margin-top:12px}
+h1+p{font-size:15px}
+.choices button{font-size:14px}
+.actions{flex-direction:column}
+.result h2{font-size:26px}
+}
+</style>
+</head>
+<body>
+<main id="app"></main>
 
-const S=[['純手工捏飯團水豚 (•̀ω•́)','你相信雙手的溫度，也真的把每份文件捏得很仔細。AI 對你來說像辦公室角落那台還沒拆膜的神秘機器。','從「請幫我把這段改得更清楚」開始。一次只交一個小任務給 AI，保留你的細心，偷一點時間。'],['複製貼上小倉鼠 (🐹•ω•)','你已發展出高速搬運技能：同一句話可以安穩住進 12 封信。可愛，但手腕表示它想放假。','把常用回覆交給 AI 變成 3 種語氣範本，再用變數替換姓名與日期。'],['公式迷路小企鵝 (•ㅅ•)','你和 Excel 的關係像在雪地探險：偶爾找到寶藏，偶爾一格公式就讓你滑倒。','把欄位與期望結果貼給 AI，請它解釋公式每一段在做什麼，不只拿答案。'],['會議筆記章魚燒 (˶ᵔ ᵕ ᵔ˶)','你有好多觸手在記重點，散會後卻發現漏了一顆重要章魚。忙得熱呼呼，仍然很可靠。','先開逐字稿，請 AI 依「決策／待辦／負責人／期限」輸出，最後花 2 分鐘校對。'],['提示詞練習生兔兔 (ᐢ.ˬ.ᐢ)','你已經會問 AI 問題，也知道不同問法會召喚不同魔法。現在正在長出專屬的小耳朵雷達。','每次加上三件事：角色、背景、輸出格式。'],['自動化探險小浣熊 (✦ˊᵕˋ✦)','重複工作一出現，你的鼻子就聞到「這可以省力」的味道。你正在收集讓日子更鬆的零件。','挑一個每週重複任務，畫出「觸發→整理→輸出」三步，先讓 AI 幫你設計最小自動化。'],['資料整理貓頭鷹 (◉ᴗ◉)','你不是只求快；你會檢查來源、梳理脈絡，還能在雜亂資料裡叼出真正的重點。','建立 AI 交稿檢查清單：數字、日期、專名、語氣、附件。'],['流程魔法小狐狸 (ᵔᴥᵔ)','你已經懂得把 AI 放進工作流程，不讓它搶方向盤。敏捷又有邊界感，是團隊的暖心魔法師。','把最成功的提示詞存成團隊範本，附上何時使用與如何驗證。'],['AI 協作雲朵精靈 (☁️˘͈ᵕ˘͈)','你的工作像有一片雲在托著：腦暴、初稿、分類、摘要都有人分擔。','練習多輪協作：先請 AI 提案，再要求它自我挑錯，最後由你決定取捨。'],['ChatGPT Work 降臨神仙貓 (ฅ^•ﻌ•^ฅ)','恭喜，你是職場 AI 的溫柔指揮官！你不把 AI 當許願池，而是清楚分工的好隊友。','為常見任務建立可重複工作流，並分享你的驗證習慣。你會讓團隊整片魚罐頭都自動開好。']];
+<script>
+const Q=[
+['📝','主管丟來一份「麻煩潤飾一下」的 2,000 字文案，你會？',['深呼吸，自己慢慢捏字句','先改一半，再問 AI 另一半','請 AI 出三版，我負責挑可愛的','我早有專屬提示詞魔法書']],
+['📊','Excel 出現 800 列資料需要整理，第一個念頭是？',['手動排序，手指會記得一切','善用篩選，至少不是全手動','請 AI 幫我寫公式，再檢查','Power Query + AI：資料自己排隊']],
+['🎙️','一小時會議結束，會議紀錄在對你眨眼。你？',['憑記憶寫，祈禱沒漏重點','邊回放邊快轉，努力當人形錄音筆','丟逐字稿給 AI 摘要，人工複核','會前就開好 AI 記錄員，散會即交卷']],
+['📧','同類型回信今天要發第 15 封，你的能量條？',['複製貼上，改名字改到眼神死','存範本，還是手動補內容','請 AI 依對象調整語氣','自動化流程已準備好，我去泡茶']],
+['🧠','面對陌生工作任務時，你怎麼拆解？',['先 Google 三小時，勇敢前進','問同事，然後努力筆記','請 AI 協助列步驟與檢查清單','先餵背景、目標、限制，請 AI 當副駕']],
+['⚙️','每週都要做同一份報表，你會？',['把它當例行修行','建立模板，至少排版不用重來','研究一下能否讓 AI 協助彙整','串好自動化，報表自己來報到']],
+['🔎','AI 給了一段看起來超專業的答案，你的反應？',['好像很有道理，先貼上','挑幾句查查看','核對數字、來源和任務條件','把 AI 當草稿搭檔，驗證是我的超能力']],
+['🎨','同事說：「可以把這份內容變得有吸引力嗎？」',['加粗、加色、加很多愛','找幾個舊簡報當參考','請 AI 提供結構與標題提案','先定受眾，再請 AI 產多種敘事版本']],
+['🗂️','資料夾堆成「final_final_真的最終版」，你會？',['靠直覺尋寶','今天開始命名規則（明天再說）','請 AI 協助整理命名與索引','流程、標籤、摘要都自動化，舒暢']],
+['✨','你理想中的 AI 同事應該是？',['偶爾幫我查資料就好','能幫我省一點打字時間','幫我先做 70% 的草稿','能被我清楚指揮的全天候小隊']]
+];
 
-const H=['提示詞下對｜準時下班吃火鍋｜AI 萬歲','Excel 壞掉｜側邊欄裡問一聲｜秒修好過關','會議剛散場｜逐字稿已排成隊｜咖啡還溫','信件排長龍｜AI 幫我穿針線｜寄出小星星','報表像海浪｜公式撐起小雨傘｜準點到岸邊','老闆說快點｜我說正在想辦法｜其實問 AI','複製貼上忙｜小倉鼠轉著滾輪｜終於有範本','檔名最終版｜最終版真的最終｜雲端在微笑','提示詞一改｜語氣忽然有靈魂｜客戶點點頭','資料很凌亂｜貓頭鷹眨眨眼睛｜重點飛出來','月報又來了｜自動化按下按鈕｜午後有空閒','表格排整齊｜AI 偷偷擦桌面｜我喝一口茶','腦暴到深夜｜雲朵吐出十點子｜挑一顆發光','附件忘記放｜AI 沒有提醒我｜人類要檢查','期限在奔跑｜狐狸畫好流程圖｜尾巴不著火','十頁的逐字｜濃縮成三行待辦｜會議變輕盈','程式碼怕我｜我先請 AI 翻譯｜勇敢按儲存','數字會說話｜先把來源查一遍｜安心按送出','客戶改三次｜提示詞也伸懶腰｜第四版可愛','週一的早晨｜AI 先煮好草稿｜我加一點鹽','表單像迷宮｜小浣熊拉起絲線｜資料自己來','KPI 閃閃亮｜不是魔法是整理｜還有一點肝','滑鼠點太久｜快捷鍵與 AI 說｜手腕謝謝你','內容要新鮮｜先給受眾和情境｜靈感冒泡泡','資料不確定｜神仙貓拿放大鏡｜引用要驗證','午餐前十分｜自動寄出週報了｜便當加雞腿','簡報要好看｜AI 排好故事線｜我來講人味','任務像積木｜拆成三塊丟出去｜焦慮變小顆','今天學一招｜明天少按五十下｜職場開小花','答案雖漂亮｜還是核對小數點｜專業最可愛'];
+const S=[
+['純手工捏飯團水豚 (•̀ω•́)','你相信雙手的溫度，也真的把每份文件捏得很仔細。AI 對你來說像辦公室角落那台還沒拆膜的神秘機器。','從「請幫我把這段改得更清楚」開始。一次只交一個小任務給 AI，保留你的細心，偷一點時間。'],
+['複製貼上小倉鼠 (🐹•ω•)','你已發展出高速搬運技能：同一句話可以安穩住進 12 封信。可愛，但手腕表示它想放假。','把常用回覆交給 AI 變成 3 種語氣範本，再用變數替換姓名與日期。'],
+['公式迷路小企鵝 (•ㅅ•)','你和 Excel 的關係像在雪地探險：偶爾找到寶藏，偶爾一格公式就讓你滑倒。','把欄位與期望結果貼給 AI，請它解釋公式每一段在做什麼，不只拿答案。'],
+['會議筆記章魚燒 (˶ᵔ ᵕ ᵔ˶)','你有好多觸手在記重點，散會後卻發現漏了一顆重要章魚。忙得熱呼呼，仍然很可靠。','先開逐字稿，請 AI 依「決策／待辦／負責人／期限」輸出，最後花 2 分鐘校對。'],
+['提示詞練習生兔兔 (ᐢ.ˬ.ᐢ)','你已經會問 AI 問題，也知道不同問法會召喚不同魔法。現在正在長出專屬的小耳朵雷達。','每次加上三件事：角色、背景、輸出格式。'],
+['自動化探險小浣熊 (✦ˊᵕˋ✦)','重複工作一出現，你的鼻子就聞到「這可以省力」的味道。你正在收集讓日子更鬆的零件。','挑一個每週重複任務，畫出「觸發→整理→輸出」三步，先讓 AI 幫你設計最小自動化。'],
+['資料整理貓頭鷹 (◉ᴗ◉)','你不是只求快；你會檢查來源、梳理脈絡，還能在雜亂資料裡叼出真正的重點。','建立 AI 交稿檢查清單：數字、日期、專名、語氣、附件。'],
+['流程魔法小狐狸 (ᵔᴥᵔ)','你已經懂得把 AI 放進工作流程，不讓它搶方向盤。敏捷又有邊界感，是團隊的暖心魔法師。','把最成功的提示詞存成團隊範本，附上何時使用與如何驗證。'],
+['AI 協作雲朵精靈 (☁️˘͈ᵕ˘͈)','你的工作像有一片雲在托著：腦暴、初稿、分類、摘要都有人分擔。','練習多輪協作：先請 AI 提案，再要求它自我挑錯，最後由你決定取捨。'],
+['ChatGPT Work 降臨神仙貓 (ฅ^•ﻌ•^ฅ)','恭喜，你是職場 AI 的溫柔指揮官！你不把 AI 當許願池，而是清楚分工的好隊友。','為常見任務建立可重複工作流，並分享你的驗證習慣。你會讓團隊整片魚罐頭都自動開好。']
+];
+
+const H=['提示詞下對｜準時下班吃火鍋｜AI 萬歲','Excel 壞掉｜側邊欄裡問一聲｜秒修好過關','會議剛散場｜逐字稿已排成隊｜咖啡還溫','信件排長龍｜AI 幫我穿針線｜寄出小星星','報表像海浪｜公式撐起小雨傘｜準點到岸邊','老闆說快點｜我說正在想辦法｜其實問 AI','複製貼上忙｜小倉鼠轉著滾輪｜終於有範本','檔名最終版｜最終版真的最終｜雲端在微笑','提示詞一改｜語氣忽然有靈魂｜客戶點點頭','資料很凌亂｜貓頭鷹眨眨眼睛｜重點飛出來'];
+
 const CHARACTERS=['capybara-riceball.png','hamster-copy.png','penguin-excel.png','takoyaki-notes.png','bunny-prompt.png','raccoon-automation.png','owl-data.png','fox-workflow.png','cloud-fairy.png','divine-ai-cat.png'];
-const characterIndex=()=>Math.min(9,Math.max(0,Math.floor((score-10)/10)));
-const characterSrc=n=>`characters/${CHARACTERS[n]}`;
+
 let page=0,p=0,score=0,h=H[0];
 const app=document.querySelector('#app');
-const start=()=>{page=1;
-p=0;
-score=0;
-render()};
-const pick=i=>{score+=[1,3,6,10][i];
-if(p===9){h=H[Math.floor(Math.random()*H.length)];
-page=2}else p++;
-render()};
-const save=()=>{const s=S[characterIndex()],c=document.createElement('canvas'),x=c.getContext('2d');
-c.width=1080;c.height=1350;
-const wrapLines=(text,maxWidth,font)=>{x.font=font;let line='',lines=[];for(const ch of text){if(x.measureText(line+ch).width>maxWidth&&line){lines.push(line);line=ch}else line+=ch}if(line)lines.push(line);return lines};
-const drawText=(text,left,top,maxWidth,font,color,lineHeight)=>{const lines=wrapLines(text,maxWidth,font);x.font=font;x.fillStyle=color;x.textAlign='left';lines.forEach((line,index)=>x.fillText(line,left,top+index*lineHeight));return lines.length*lineHeight};
-const drawCard=()=>{x.fillStyle='#F7EFE8';x.fillRect(0,0,1080,1350);
-x.fillStyle='#E97D70';x.fillRect(0,0,24,1350);
-x.fillStyle='#FFFCF8';x.beginPath();x.roundRect(55,45,970,1260,44);x.fill();
-x.fillStyle='#F7D9C8';x.beginPath();x.roundRect(100,105,214,42,21);x.fill();
-x.fillStyle='#9A4C44';x.font='bold 18px sans-serif';x.textAlign='center';x.fillText('WORKPLACE AI SOUL',207,133);
-x.fillStyle='#354052';x.font='bold 28px sans-serif';x.textAlign='left';x.fillText('你的職場 AI 靈魂鑑定卡',100,205);
-x.fillStyle='#B56B5D';x.font='22px sans-serif';x.fillText('把你的工作風格，好好收藏起來。',100,244);
-x.fillStyle='#E97D70';x.fillRect(100,282,880,3);
-const titleLines=wrapLines(s[0],820,'bold 48px sans-serif');x.font='bold 48px sans-serif';x.fillStyle='#253247';x.textAlign='center';titleLines.forEach((line,index)=>x.fillText(line,540,365+index*58));
-const titleBottom=365+(titleLines.length-1)*58;
-x.fillStyle='#FFF0C8';x.beginPath();x.roundRect(365,titleBottom+38,350,58,29);x.fill();
-x.fillStyle='#A5663C';x.font='bold 23px sans-serif';x.fillText('AI 共感指數　'+Math.min(100,score)+'%',540,titleBottom+76);
-let y=titleBottom+145;
-const section=(label,body,tint)=>{const height=Math.max(158,84+wrapLines(body,760,'25px sans-serif').length*38);x.fillStyle=tint;x.beginPath();x.roundRect(100,y,880,height,30);x.fill();x.fillStyle='#C9675B';x.font='bold 25px sans-serif';x.textAlign='left';x.fillText(label,140,y+44);drawText(body,140,y+87,760,'25px sans-serif','#354052',38);y+=height+24};
-section('01　性格與職場現況',s[1],'#FFF3EC');
-section('02　職場開運解藥',s[2],'#FFF8DD');
-x.fillStyle='#354052';x.beginPath();x.roundRect(100,y,880,160,30);x.fill();
-x.fillStyle='#FFD37A';x.font='bold 23px sans-serif';x.textAlign='left';x.fillText('TODAY\'S AI HAIKU',140,y+47);
-x.fillStyle='#FFFFFF';x.font='bold 29px sans-serif';x.textAlign='center';x.fillText(h.split('｜').join('　／　'),540,y+105);
-x.fillStyle='#C9675B';x.font='20px sans-serif';x.fillText('WORK SMART · STAY CURIOUS · BE YOU',540,1235);
-const a=document.createElement('a');a.href=c.toDataURL('image/png');a.download='我的職場AI靈魂.png';a.click()};
-drawCard()};
-function render(){let s=S[Math.min(9,Math.max(0,Math.floor((score-10)/10)))];
-app.innerHTML='<div class="stars">✦　☁　✧</div>'+(!page?`<section class="card start"><div class="hero">🤖🐾</div><small>WORKPLACE AI SOUL CHECK</small><h1>職場 AI 靈魂型態測驗<br/>(⁠*⁠´⁠ω⁠｀⁠*⁠)</h1><p>你是勤奮打字小魔王，還是 AI 甩手大掌櫃？<br/>10 秒測出你的職場 AI 基因✨</p><div class="tags">文字處理　Excel　自動化</div><br><button onclick="start()">開始測驗　➜</button><i>共 10 題 · 跟著直覺選就好喵！/ 旗標知識講堂 x ChatGPT Work 出品(•̀ω•́)⸝ި ʕᦏ⌎ </i>
-</section>`:page===1?`<section class="card quiz"><header>Question ${p+1}/10 🐾 <b>${(p+1)*10}%</b>
-</header><div class="bar"><span style="width:${(p+1)*10}%">
-</span>
-</div><div class="icon">${Q[p][0]}</div><small>職場情境快問快答</small><h2>${Q[p][1]}</h2><div class="choices">${Q[p][2].map((v,i)=>`<button onclick="pick(${i})"><strong>${'ABCD'[i]}</strong>${v}<b>›</b>
-</button>`).join('')}</div><i>選最像你的那一項，沒有標準答案！</i>
-</section>`:`<section class="card result"><small>✨ 你的職場 AI 靈魂是 ✨</small><h2>${s[0]}</h2>
-<img class="portrait" src="${characterSrc(characterIndex())}" alt="你的 AI 靈魂角色">
-<mark>AI 共感指數 ${Math.min(100,score)}%</mark><article><h3>🧠 性格與職場現況</h3><p>${s[1]}</p>
-</article><article><h3>💊 職場開運解藥</h3><p>${s[2]}</p>
-</article><article class="haiku"><h3>⛩️ 今日 AI 俳句</h3><p>${h.split('｜').join(' ／ ')}</p>
-</article><div class="actions"><button class="outline" onclick="save()">🖼️ 匯出分享圖</button><button onclick="start()">再測一次 ↻</button>
-</div><i>把結果分享給同事，召喚他們的 AI 小怪獸！</i>
-</section>`)}render();
+const characterIndex=()=>Math.min(9,Math.max(0,Math.floor((score-10)/10)));
+const characterSrc=n=>`characters/${CHARACTERS[n]}`;
+
+function start(){
+  page=1;p=0;score=0;render();
+}
+
+function pick(i){
+  score+=[1,3,6,10][i];
+  if(p===9){
+    h=H[Math.floor(Math.random()*H.length)];
+    page=2;
+  }else{
+    p++;
+  }
+  render();
+}
+
+function save(){
+  const s=S[characterIndex()];
+  const c=document.createElement('canvas');
+  const x=c.getContext('2d');
+  c.width=1080;
+  c.height=1350;
+
+  const wrapLines=(text,maxWidth,font)=>{
+    x.font=font;
+    let line='',lines=[];
+    for(const ch of text){
+      if(x.measureText(line+ch).width>maxWidth&&line){
+        lines.push(line);
+        line=ch;
+      }else{
+        line+=ch;
+      }
+    }
+    if(line)lines.push(line);
+    return lines;
+  };
+
+  const drawText=(text,left,top,maxWidth,font,color,lineHeight)=>{
+    const lines=wrapLines(text,maxWidth,font);
+    x.font=font;
+    x.fillStyle=color;
+    x.textAlign='left';
+    lines.forEach((line,index)=>x.fillText(line,left,top+index*lineHeight));
+    return lines.length*lineHeight;
+  };
+
+  x.fillStyle='#f7efe8';
+  x.fillRect(0,0,1080,1350);
+
+  x.fillStyle='#e97d70';
+  x.fillRect(0,0,24,1350);
+
+  x.fillStyle='#fffcf8';
+  x.beginPath();
+  x.roundRect(55,45,970,1260,44);
+  x.fill();
+
+  x.fillStyle='#f7d9c8';
+  x.beginPath();
+  x.roundRect(100,105,214,42,21);
+  x.fill();
+
+  x.fillStyle='#9a4c44';
+  x.font='bold 18px sans-serif';
+  x.textAlign='center';
+  x.fillText('WORKPLACE AI SOUL',207,133);
+
+  x.fillStyle='#354052';
+  x.font='bold 28px sans-serif';
+  x.textAlign='left';
+  x.fillText('你的職場 AI 靈魂鑑定卡',100,205);
+
+  x.fillStyle='#b56b5d';
+  x.font='22px sans-serif';
+  x.fillText('把你的工作風格，好好收藏起來。',100,244);
+
+  x.fillStyle='#e97d70';
+  x.fillRect(100,282,880,3);
+
+  const titleLines=wrapLines(s[0],820,'bold 48px sans-serif');
+  x.font='bold 48px sans-serif';
+  x.fillStyle='#253247';
+  x.textAlign='center';
+  titleLines.forEach((line,index)=>x.fillText(line,540,365+index*58));
+
+  const titleBottom=365+(titleLines.length-1)*58;
+
+  x.fillStyle='#fff0c8';
+  x.beginPath();
+  x.roundRect(365,titleBottom+38,350,58,29);
+  x.fill();
+
+  x.fillStyle='#a5663c';
+  x.font='bold 23px sans-serif';
+  x.fillText('AI 共感指數　'+Math.min(100,score)+'%',540,titleBottom+76);
+
+  let y=titleBottom+145;
+
+  const section=(label,body,tint)=>{
+    const height=Math.max(158,84+wrapLines(body,760,'25px sans-serif').length*38);
+
+    x.fillStyle=tint;
+    x.beginPath();
+    x.roundRect(100,y,880,height,30);
+    x.fill();
+
+    x.fillStyle='#c9675b';
+    x.font='bold 25px sans-serif';
+    x.textAlign='left';
+    x.fillText(label,140,y+44);
+
+    drawText(body,140,y+87,760,'25px sans-serif','#354052',38);
+    y+=height+24;
+  };
+
+  section('01　性格與職場現況',s[1],'#fff3ec');
+  section('02　職場開運解藥',s[2],'#fff8dd');
+
+  x.fillStyle='#354052';
+  x.beginPath();
+  x.roundRect(100,y,880,160,30);
+  x.fill();
+
+  x.fillStyle='#ffd37a';
+  x.font='bold 23px sans-serif';
+  x.textAlign='left';
+  x.fillText("TODAY'S AI HAIKU",140,y+47);
+
+  x.fillStyle='#fff';
+  x.font='bold 29px sans-serif';
+  x.textAlign='center';
+  x.fillText(h.split('｜').join('　／　'),540,y+105);
+
+  x.fillStyle='#c9675b';
+  x.font='20px sans-serif';
+  x.fillText('WORK SMART · STAY CURIOUS · BE YOU',540,1235);
+
+  const a=document.createElement('a');
+  a.href=c.toDataURL('image/png');
+  a.download='我的職場AI靈魂.png';
+  a.click();
+}
+
+function render(){
+  const s=S[characterIndex()];
+
+  if(page===0){
+    app.innerHTML=`
+      <section class="card">
+        <div style="font-size:70px;margin-bottom:12px">🤖🐾</div>
+        <small>WORKPLACE AI SOUL CHECK</small>
+        <h1>職場 AI 靈魂型態測驗<br>(⁠*⁠´⁠ω⁠｀⁠*)</h1>
+        <p>你是勤奮打字小魔王，還是 AI 甩手大掌櫃？<br>10 秒測出你的職場 AI 基因✨</p>
+        <div class="tags">文字處理　Excel　自動化</div><br>
+        <button onclick="start()">開始測驗　➜</button>
+        <i>共 10 題 · 跟著直覺選就好喵！</i>
+      </section>`;
+    return;
+  }
+
+  if(page===1){
+    app.innerHTML=`
+      <section class="card quiz">
+        <header>Question ${p+1}/10 🐾 <b>${(p+1)*10}%</b></header>
+        <div class="bar"><span style="width:${(p+1)*10}%"></span></div>
+        <div class="icon">${Q[p][0]}</div>
+        <small>職場情境快問快答</small>
+        <h2>${Q[p][1]}</h2>
+        <div class="choices">
+          ${Q[p][2].map((v,i)=>`
+            <button onclick="pick(${i})">
+              <strong>${'ABCD'[i]}</strong>${v}<b>›</b>
+            </button>`).join('')}
+        </div>
+        <i>選最像你的那一項，沒有標準答案！</i>
+      </section>`;
+    return;
+  }
+
+  app.innerHTML=`
+    <section class="card result">
+      <small>✨ 你的職場 AI 靈魂是 ✨</small>
+      <h2>${s[0]}</h2>
+      <img class="portrait" src="${characterSrc(characterIndex())}" alt="你的 AI 靈魂角色">
+      <mark>AI 共感指數 ${Math.min(100,score)}%</mark>
+      <article>
+        <h3>🧠 性格與職場現況</h3>
+        <p>${s[1]}</p>
+      </article>
+      <article>
+        <h3>💊 職場開運解藥</h3>
+        <p>${s[2]}</p>
+      </article>
+      <article class="haiku">
+        <h3>⛩️ 今日 AI 俳句</h3>
+        <p>${h.split('｜').join(' ／ ')}</p>
+      </article>
+      <div class="actions">
+        <button class="outline" onclick="save()">🖼️ 匯出分享圖</button>
+        <button onclick="start()">再測一次 ↻</button>
+      </div>
+      <i>把結果分享給同事，召喚他們的 AI 小怪獸！</i>
+    </section>`;
+}
+
+render();
 </script>
-<style>.portrait{display:block;width:145px;height:145px;object-fit:contain;object-position:center;margin:8px auto 12px;padding:6px;border-radius:24px;background:#fff8e8;box-shadow:0 5px 0 #ffd2c9;border:2px solid #FF8A75}.result>h2{margin-top:4px}</style>
-<script>Q.push(['🧩','收到很長的客戶回饋，你會？',['逐句閱讀，靠螢光筆撐住','先分段，再慢慢整理','請 AI 分類正負意見與待辦','用固定格式讓 AI 產洞察摘要']],['📆','臨時要安排跨部門會議，你會？',['來回私訊湊時間','開共用表單慢慢喬','請 AI 先整理可用時段','讓流程自動收集、排程、寄提醒']],['🔁','一份資料要轉成三種格式時？',['一份一份慢慢複製','建立格式範本','請 AI 幫忙轉成對應版本','把轉換規則寫成可重複流程']],['🧹','同事傳來很亂的資料，你會？',['先嘆氣再開始修','手動刪除多餘空格','請 AI 提出清理步驟','先定資料規則再批次清理']],['💡','需要想 20 個活動標題，你會？',['腦袋榨汁到最後一滴','參考競品再改一點','請 AI 一口氣給靈感','給受眾、禁語與語氣後多輪篩選']],['🔐','把敏感資料交給 AI 前？',['直接貼上，應該沒事','刪掉幾個名字','先遮蔽個資與機密','只用核准工具與去識別資料']],['📖','看到新 AI 功能上線時？',['等別人先用','收藏起來以後研究','找一個任務試試看','設計小實驗衡量省下多少時間']],['🧪','AI 的第一版內容不理想，你會？',['自己重寫比較快','再問一次「寫好一點」','補充範例與目標再問','指出問題、逐輪調整並保存提示詞']],['🧾','月底要核對發票與費用時？',['一張張比對','做個 Excel 清單','請 AI 設計核對公式','建立擷取、比對與異常提醒流程']],['📣','要把艱深政策說給同事聽？',['原文轉寄，大家加油','自己翻成白話','請 AI 先寫 FAQ','請 AI 做受眾分級版本，再由我審核']],['🧭','專案卡住沒有下一步時？',['努力加班找突破口','找同事聊聊','請 AI 幫我列選項','提供限制與風險，請 AI 協助比較方案']],['🎯','收到模糊需求「做得有質感」時？',['憑感覺衝一版','找參考圖','請 AI 幫忙問出需求','先釐清受眾、目的、成功標準']],['🗣️','需要把中文內容變成英文信時？',['自己翻譯到凌晨','使用翻譯工具後修改','請 AI 依商務語氣翻譯','提供對象與目的，請 AI 出多種語氣']],['🧱','想把 AI 能力分享給團隊時？',['先自己用熟再說','丟一個好用連結','分享實用提示詞','建立可複用範本與安全守則']],['🌱','你希望 AI 帶來什麼？',['明天再研究','少打幾個字就好','留更多思考時間','讓團隊把時間還給重要的事']]);Q.sort(()=>Math.random()-.5);new MutationObserver(()=>{const c=document.querySelector('.result');if(c&&!c.querySelector('.portrait')){const n=Math.min(9,Math.max(0,Math.floor((score-10)/10))),d=document.createElement('div');d.className='portrait';d.style.setProperty('--x',n%5);d.style.setProperty('--y',Math.floor(n/5));c.querySelector('h2').insertAdjacentElement('beforebegin',d)}}).observe(app,{childList:true,subtree:true});</script>
 </body>
 </html>
